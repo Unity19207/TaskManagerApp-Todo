@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #151515;
+}
+
+::-webkit-scrollbar {
+    width: 4px !important;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+::-webkit-scrollbar-thumb {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background: #c73659;
+    border: 6px solid rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a91d3a;
+}
