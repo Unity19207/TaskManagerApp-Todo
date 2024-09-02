@@ -1,15 +1,13 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
-
+const url = process.env.MONGO_URI;
 const conn = async () => {
     try {
         await mongoose
-            .connect(
-                "mongodb+srv://user:1UserDatabase_123@cluster0.h7vs1.mongodb.net/"
-            )
+            .connect(url)
             .then(() => console.log("Connected to Database Successfully"));
     } catch (error) {
         console.log("Error: ", error);
     }
 };
-
 conn();
