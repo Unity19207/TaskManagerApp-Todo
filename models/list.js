@@ -1,21 +1,24 @@
 const mongoose = require("mongoose");
 
 // create schema
-const listSchema = new mongoose.Schema({
+const listSchema = new mongoose.Schema(
+  {
     title: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     description: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
-    user: [{
+    user: [
+      {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-    }],
-},
-    { timestamps: true }
+      },
+    ],
+  },
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("List", listSchema);
