@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
     return (
         <>
-            <div className="flex flex-col items-center gap-8 sm:text-wrap   sm:h-[100%] h-[85dvh] w-full justify-center px-[50px] pt-[25px] pb-[25px] bg-[#151515]	">
+            <div className="flex flex-col items-center gap-8 sm:text-wrap  sm:pt-0 sm:px-[25px] h-[85dvh] w-full justify-center px-[50px] pt-[25px] pb-[25px] bg-[#151515]	">
                 <h1 className="text-[#EEEEEE] text-center text-[70px]  font-bold sm:text-[50px] ">
                     Organize your <br />{" "}
                     <span className="text-[#C73659] text-[70px] font-bold sm:text-[50px]">

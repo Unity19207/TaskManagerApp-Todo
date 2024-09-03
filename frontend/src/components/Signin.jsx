@@ -45,7 +45,7 @@ function Signin() {
     };
     return (
         <>
-            <div className="flex flex-col items-center sm:flex-wrap sm:h-full gap-8 h-[85dvh] w-full justify-center px-[50px] pt-[25px] pb-[25px] bg-[#151515]	">
+            <div className="flex flex-col items-center sm:flex-wrapsm:px-5 sm:items-center sm:justify-center sm:w-full sm:h-full gap-8 h-[85dvh] w-full justify-center px-[50px] pt-[25px] pb-[25px] bg-[#151515]	">
                 <Toaster position="top-center" reverseOrder={true} />
                 <div className="mt-7  p-8 sm:w-[350px] w-[500px] bg-[#151515] border border-gray-200  text-[#EEEEEE]  rounded-xl shadow-sm">
                     <div className="p-4 sm:p-7">
