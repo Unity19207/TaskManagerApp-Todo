@@ -28,7 +28,7 @@ function Signup() {
 
       (error) => {
         // console.log(error);
-        toast.error(error.response.data.message);
+        toast.error("Error signing up: " + error.response.data.message);
       }
     );
     // toast.success("Account Created Successfully !");

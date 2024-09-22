@@ -2,7 +2,7 @@ function About() {
   return (
     <>
       <div className="flex flex-col items-center sm:flex-wrap sm:text-wrap  gap-8 h-[85dvh] w-full justify-center px-[50px] pt-[25px] pb-[25px] bg-[#151515]	">
-        <h1 className="text-[#EEEEEE] text-center text-[70px] font-bold sm:text-[40px]   ">
+        <h1 className="text-[#C73659] text-center text-[70px] font-bold sm:text-[40px]   ">
           About Us
         </h1>
         <p className="text-[#EEEEEE] text-sm leading-relaxed text-center  font-light max-w-[900px]">

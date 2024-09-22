@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../store";
 import { useNavigate } from "react-router-dom";
 
+import logoImage from "../task.png";
+
 function Navbar() {
   const navigate = useNavigate();
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
@@ -28,13 +30,9 @@ function Navbar() {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Todo App"
-          />
+          <img src={logoImage} className=" size-10" alt="Todo App" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#EEEEEE]">
-            Todo App
+            Task Manager
           </span>
         </Link>
 
@@ -61,7 +59,7 @@ function Navbar() {
               type="button"
               className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent text-blue-600 hover:bg-blue-100 hover:text-blue-800 focus:outline-none focus:bg-blue-100 focus:text-blue-800 active:bg-blue-100 active:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:bg-blue-800/30 dark:hover:text-blue-400 dark:focus:bg-blue-800/30 dark:focus:text-blue-400 dark:active:bg-blue-800/30 dark:active:text-blue-400"
             >
-              Add Todo
+              Add Tasks
             </button>
           </Link>
           {!isLoggedIn && (
@@ -69,7 +67,13 @@ function Navbar() {
               <Link to="/signup">
                 <button
                   type="button"
-                  className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-teal-100 text-teal-800 hover:bg-teal-200 focus:outline-none focus:bg-teal-200 disabled:opacity-50 disabled:pointer-events-none dark:text-teal-500 dark:bg-teal-800/30 dark:hover:bg-teal-800/20 dark:focus:bg-teal-800/20"
+                  className="py-3 px-4 
+                  inline-flex items-center gap-x-2 text-sm font-medium
+                   rounded-lg border border-transparent
+                    bg-teal-100 text-teal-800 hover:bg-teal-200 
+                    focus:outline-none focus:bg-teal-200 disabled:opacity-50 disabled:pointer-events-none
+                     dark:text-teal-500 dark:bg-teal-800/30 dark:hover:bg-teal-800/20
+                      dark:focus:bg-teal-800/20"
                 >
                   Sign Up
                 </button>
@@ -77,7 +81,10 @@ function Navbar() {
               <Link to="/signin">
                 <button
                   type="button"
-                  className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 focus:outline-none focus:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-400 dark:bg-blue-800/30 dark:hover:bg-blue-800/20 dark:focus:bg-blue-800/20"
+                  className="py-3 px-4 inline-flex 
+                  items-center gap-x-2 text-sm font-medium rounded-lg border
+                   border-transparent bg-blue-100 text-blue-800
+                    hover:bg-blue-200 focus:outline-none focus:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-400 dark:bg-blue-800/30 dark:hover:bg-blue-800/20 dark:focus:bg-blue-800/20"
                 >
                   Sign In
                 </button>
@@ -129,7 +136,7 @@ function Navbar() {
           !isSidebarOpen ? "translate-x-full" : "translate-x-0"
         } transition-transform duration-300 ease-in-out sm:block md:block hidden z-50`}
       >
-        <div className="flex flex-col p-4 space-y-4">
+        <div className="flex flex-col place-items-center p-4 space-y-4">
           <button
             onClick={toggleSidebar}
             className="text-[#EEEEEE] self-end focus:outline-none"
@@ -170,7 +177,7 @@ function Navbar() {
               type="button"
               className="py-3 px-4 w-full text-left text-sm font-medium text-blue-600 hover:bg-blue-100 hover:text-blue-800"
             >
-              Add Todo
+              Add Tasks
             </button>
           </Link>
           {!isLoggedIn && (
@@ -178,7 +185,10 @@ function Navbar() {
               <Link to="/signup" onClick={toggleSidebar}>
                 <button
                   type="button"
-                  className="py-3 px-4 w-full text-left text-sm font-medium bg-teal-100 text-teal-800 hover:bg-teal-200"
+                  className="py-3 px-[80px] w-full text-left text-sm 
+                    rounded-lg border
+                   border-transparent bg-blue-100 text-blue-800
+                    hover:bg-blue-200 focus:outline-none focus:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-400 dark:bg-blue-800/30 dark:hover:bg-blue-800/20 dark:focus:bg-blue-800/20"
                 >
                   Sign Up
                 </button>
@@ -186,7 +196,12 @@ function Navbar() {
               <Link to="/signin" onClick={toggleSidebar}>
                 <button
                   type="button"
-                  className="py-3 px-4 w-full text-left text-sm font-medium bg-blue-100 text-blue-800 hover:bg-blue-200"
+                  className="py-3 px-[80px] w-full text-left text-sm 
+                    rounded-lg border border-transparent
+                    bg-teal-100 text-teal-800 hover:bg-teal-200 
+                    focus:outline-none focus:bg-teal-200 disabled:opacity-50 disabled:pointer-events-none
+                     dark:text-teal-500 dark:bg-teal-800/30 dark:hover:bg-teal-800/20
+                      dark:focus:bg-teal-800/20"
                 >
                   Sign In
                 </button>
@@ -217,7 +232,7 @@ function Navbar() {
       {/* Overlay to close sidebar */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 md:hidden"
+          className="fixed inset-0 bg-black opacity-100 md:hidden"
           onClick={toggleSidebar}
         ></div>
       )}
