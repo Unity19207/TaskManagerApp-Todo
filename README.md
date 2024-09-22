@@ -62,11 +62,9 @@ cd TaskManagerApp-Todo
 
 #### Backend
 
-Navigate to the `server` folder and run:
+Navigate to the `TaskManagerApp-Todo` folder and run:
 
 ```bash
-
-cd server
 
 npm install
 
@@ -74,11 +72,11 @@ npm install
 
 #### Frontend
 
-Navigate to the `client` folder and run:
+Navigate to the `frontend` folder and run:
 
 ```bash
 
-cd client
+cd frontend
 
 npm install
 
@@ -88,27 +86,27 @@ npm install
 
 #### Backend
 
-In the `server` folder, start the backend:
+In the `TaskManagerApp-Todo` folder, start the backend:
 
 ```bash
 
-npm run dev
+npm run start
 
 ```
 
 #### Frontend
 
-In the `client` folder, start the frontend:
+In the `frontend` folder, start the frontend:
 
 ```bash
 
-npm start
+npm run start
 
 ```
 
 ### 5. Access the App
 
-Once both the frontend and backend servers are running, open your browser and go to `http://localhost:3000` to access the app.
+Once the backend server is running, open your browser and go to `http://localhost:1000` to access the app.
 
 ## Future Improvements
 
